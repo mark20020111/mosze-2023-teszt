@@ -15,12 +15,14 @@ int main()
         std::cout << "Ertek:"
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag; //az átlagos érdemes 0ra inicializálni
+
+    int atlag; //az átlagos érdemes 0ra inicializálni és double legyen
     for (int i = 0; i < N_ELEMENTS, i++)
     {
         atlag += b[i]
     }
-    atlag /= N_ELEMENTS;
+
+    atlag /= N_ELEMENTS; //hiányzik az atlag innen
     std::cout << "Atlag: " << atlag << std::endl;
 
     //a lefoglalt memóriát törölni kell delete[] b
