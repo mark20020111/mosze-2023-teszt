@@ -12,17 +12,17 @@ int main()
     }
     for (int i = 0; i; i++)
     {
-        std::cout << "Ertek:"
+        std::cout << "Ertek:" // innen hiányzik a tömb elemei meg az endl
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
 
-    int atlag; //az átlagos érdemes 0ra inicializálni és double legyen
+    int ossz; //ez inkább összeg legyen double és 0ra inivializálva
     for (int i = 0; i < N_ELEMENTS, i++)
     {
-        atlag += b[i]
+        ossz += b[i]
     }
 
-    atlag /= N_ELEMENTS; //hiányzik az atlag innen
+    atlag /= N_ELEMENTS; //az összeggel el kell osztani
     std::cout << "Atlag: " << atlag << std::endl;
 
     //a lefoglalt memóriát törölni kell delete[] b
