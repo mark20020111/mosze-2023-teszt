@@ -4,28 +4,32 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS]; //rosszul van írva az N_ELEMENTS
-    std::cout << '1-100 ertekek duplazasa' //hiányzik a pontosvessző
-    for (int i = 0;) //hiányzik a ciklusfeltétel
+    int *b = new int[N_ELEMENTS]; 
+    std::cout << "1-100 ertekek duplazasa"<<std::endl;
+    
+    for (int i = 0;i<N_ELEMENTS; i++)
     {
-        b[i] = i * 2; //Az i-hez hozzá kell adni 1et hogy 1től kezdjünk
+        b[i] = (i+1) * 2;
     }
-    for (int i = 0; i; i++)
+
+    for (int i = 0; i<N_ELEMENTS; i++)
     {
-        std::cout << "Ertek:" // innen hiányzik a tömb elemei meg az endl
-    }    
+        std::cout << "Ertek:" <<b[i] <<std::endl;
+    }
+    
     std::cout << "Atlag szamitasa: " << std::endl;
 
-    int ossz; //ez inkább összeg legyen double és 0ra inivializálva
-    for (int i = 0; i < N_ELEMENTS, i++)
+    double ossz=0;
+
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        ossz += b[i]
+        ossz += b[i];
     }
 
-    atlag /= N_ELEMENTS; //az összeggel el kell osztani
+    double atlag=ossz/N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
 
-    //a lefoglalt memóriát törölni kell delete[] b
+    delete[] b;
 
     return 0;
 }
