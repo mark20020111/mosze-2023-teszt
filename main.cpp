@@ -31,5 +31,7 @@ int main()
 
     delete[] b;
 
+    std::cout<<"Hello World!"<<std::endl;
+
     return 0;
 }
